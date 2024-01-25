@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplitude of Accommodation Calculator</title>
+  <link href="amplitude_calci.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Amplitude of Accommodation Calculator</h1>
+
+  <form id="accommodationForm">
+    <label for="amplitude">Amplitude of Accommodation (diopter): </label>
+    <input type="number" id="amplitude" name="amplitude" step="0.01" required>
+
+    <label for="distance">Working Distance (cm): </label>
+    <input type="number" id="distance" name="distance" step="0.01" required>
+
+    <button type="button" onclick="calculateAmplitude()">Calculate</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateAmplitude() {
+      var amplitude = parseFloat(document.getElementById('amplitude').value);
+      var distance = parseFloat(document.getElementById('distance').value);
+
+      if (!isNaN(amplitude) && !isNaN(distance)) {
+        var result = 100 / distance;
+        document.getElementById('result').innerHTML = 'Result: Amplitude of Accommodation = ' + result.toFixed(2) + ' diopter';
+      } else {
+        document.getElementById('result').innerHTML = 'Please enter valid numeric values.';
+      }
+    }
+  </script>
+
+</body>
+</html>
