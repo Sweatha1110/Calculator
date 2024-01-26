@@ -1,25 +1,27 @@
 body{
     background: -webkit-linear-gradient(90deg, #00000a,#00000a,#18273f,#00000a,#000000);
     background: linear-gradient(90deg, #00000a,#00000a,#18273f,#00000a,#000000);
+    overflow-x: hidden;
 }
-h1{
-    position: relative;
-    left: 33rem;
-    right: 50rem;
+h2{
+    text-align: center;
     color: white;
-    margin-bottom: 1rem;
+    margin: 3rem;
+}
+h4
+{
+    text-align: center;
+    margin: 1rem;
 }
 #accommodationForm
 {
     display: flex;
     flex-direction: column;
-    
     color: white;
 }
-.label
+.form-label
 {
-    font-size: x-large;
-    margin-bottom: 1rem;
+    font-weight: 700;
 }
 input{
     margin-right: 2rem;
@@ -31,4 +33,104 @@ input{
 {
     font-size: medium;
 width: fit-content;
+}
+
+.result
+{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.optical
+{
+    padding: 1% 5%;
+    margin: 1rem 21rem;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.tab-pane
+{
+    color: white;
+}
+
+.form-control
+{
+    margin-bottom: 1.5rem;
+    width: 50%;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sphere
+{
+    display: flex;
+    gap: 1;
+    .form-label
+    {
+        margin-right: 10px;
+    }
+}
+.nav-item button
+{
+    text-align: left;
+}
+
+
+li .nav-link
+{
+    color: white;
+    font-weight: 500;
+}
+.nav-tabs .nav-link.active
+{
+    color:#00008B;
+    background-color: #fafafa;
+}
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width:1170px)
+{
+    .optical
+    {
+        margin: 1rem 10rem;
+    }    
+}
+@media screen and (max-width:806px)
+{
+    .optical
+    {
+        margin: 1rem;
+        padding: 3%;
+    }    
+}
+@media screen and (max-width:480px)
+{
+        .sphere
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1;
+        justify-content: center;
+        align-items: center;
+        .form-label
+        {
+            margin-right: 10px;
+        }
+    }
+    .optical
+    {
+        padding: 3%;
+    }
 }

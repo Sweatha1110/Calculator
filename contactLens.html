@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Lens</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="amplitude_calci.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Contact Lens</h2>
+    <div class="optical shadow">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">LARS rule </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Base curves calculator</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Vertex Distance Calculator</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" >Dk/t</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="five-tab-pane" aria-selected="false" >Hofstetter formula </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"    tabindex="0" style="color: white;">
+              <h4>LARS rule</h4>
+              <div class="form">
+                <div class="sphere">
+                  <label for="sphere" class="form-label">Sphere Power</label>
+                  <input type="number" class="form-control" id="sphere" required step="0.25">
+                  <label for="sphere" class="form-label">Cyl</label>
+                  <input type="number" class="form-control"required id="cyl" >
+                  <label for="sphere" class="form-label">Axis</label>
+                  <input type="number" class="form-control" id="axis" required>
+                </div>
+                <label for="rotationHours" class="form-label">Rotation Hours</label>
+                <input type="number" class="form-control" id="rotationHours" required>
+              
+                <label for="rotationDirection" class="form-label">Select Rotation Direction</label>
+                  <select id="rotationDirection">
+                    <option value="1">Left (Clockwise)</option>
+                    <option value="2">Right (Anti-clockwise)</option>
+                  </select>
+                <button class="btn btn-primary" onclick="calculateLars()">Calculate</button>
+              <p id="resultLars" class="result"></p>
+              </div>
+              
+      
+        </div>
+
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0" style="color: white;">...</div>
+
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, corrupti.</div>
+
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, deleniti.</div>
+
+        <div class="tab-pane fade" id="five-tab-pane" role="tabpanel" aria-labelledby="five-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magnam!</div>
+      </div>
+    </div>
+  
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="amplitude.js"></script>
+
+</body>
+</html>
